@@ -1,4 +1,4 @@
-# Bazel examples and tutorial
+# Bazel examples and tutoria
 
 A collection of examples of how to use the Bazel build system.
 
