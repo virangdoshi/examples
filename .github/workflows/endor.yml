@@ -1,0 +1,15 @@
+name: Endor Labs Example
+on: pull_request
+jobs:
+  build-and-scan:
+    permissions:
+      id-token: write # Write permission is required to request a json web token (JWT) to perform keyless authentication
+      contents: read  # Required by actions/checkout@v3 to checkout a private repository
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+      - name: Scan with Endor Labs
+        uses: endorlabs/github-action@v1.1.4
+        with:
+          namespace: "virang"
